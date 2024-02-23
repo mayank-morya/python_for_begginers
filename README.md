@@ -201,11 +201,15 @@ while lenght >= 0:
     print(name[:lenght:])
     lenght -= 1
 ``` 
-3### .2 Functions:
+### 3.2 Functions:
 
 Define functions using the def keyword  
 Functions accept arguments and return values  
 Use functions to reuse code and make it modular  
+```
+def func_name():
+    pass
+```
 ## 4. OOP in Python: Object-Oriented Programming  
 ### 4.1 Classes and Objects:  
 
