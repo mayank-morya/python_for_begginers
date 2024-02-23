@@ -178,8 +178,29 @@ Adding dictionary elements: dictionary["new_key"] = value
 ## 3. Loops and Functions: Automation and Reusability  
 ### 3.1 Loops:
 
-for loop: Iterates over a sequence  
-while loop: Repeats a block of code until a condition is met  
+for loop: Iterates over a sequence 
+```
+for i in range(1, 6):  # Starts at 1, excludes 6
+    print("Number:", i)
+
+name = "John Doe"
+
+for char in name:
+    print(char)
+``` 
+while loop: Repeats a block of code until a condition is met 
+```
+i = 1
+while i <= 10:
+  print(i)
+  i += 1
+
+name = "John Doe"
+lenght = len(name)
+while lenght >= 0:
+    print(name[:lenght:])
+    lenght -= 1
+``` 
 3### .2 Functions:
 
 Define functions using the def keyword  
@@ -191,12 +212,155 @@ Use functions to reuse code and make it modular
 Define classes as blueprints for objects  
 Objects are instances of classes  
 Objects have attributes and methods  
+
+class ClassName:
+   Statement-1
+   .
+   .
+   .
+   Statement-N  
+```
+class Person:  
+    pass
+```
+
+```
+class Person:
+
+  def __init__(self, name, age, city):
+    self.name = name
+    self.age = age
+    self.city = city
+
+  def greet(self):
+    """
+    Greets the person with a personalized message.
+    """
+    print(f"Hello, my name is {self.name} and I am from {self.city}!")
+
+# Create an instance of the Person class
+person1 = Person("Mayank", 30, "Indore")
+
+# Access and modify attributes
+person1.age += 1
+print(f"Person's name: {person1.name}, age: {person1.age}, city: {person1.city}")
+
+# Call the greet method
+person1.greet()
+```
 ### 4.2 Inheritance:
 
-Create new classes (subclasses) that inherit properties from existing classes (superclasses)
+Create new classes (subclasses) that inherit properties from existing classes (superclasses)  
+
+class Parent:
+    pass
+
+class Child(Parent):
+    pass
+
+```
+class Parent:  # Creating the parent class
+    def greet(self):
+        print('Hello from the Parent class!')
+
+class Child(Parent):  # Creating the child class
+    pass
+
+# Creating an instance of the Child class
+child = Child()
+child.greet()
+
+# Output:
+# 'Hello from the Parent class!'
+```
 ### 4.3 Encapsulation and Polymorphism:
 
 Encapsulation: Protect data and methods within objects
-Polymorphism: Objects of different classes can respond to the same method in different ways
+```
+class BankAccount:
+    """
+    Represents a bank account with encapsulated balance and account number.
+    """
+
+    def __init__(self, _account_number, initial_balance):
+        self._account_number = _account_number  # Private attribute
+        self._balance = initial_balance  # Private attribute
+
+    def get_balance(self):
+        """
+        Returns the account balance.
+        """
+        return self._balance
+
+    def deposit(self, amount):
+        """
+        Deposits money into the account.
+        """
+        if amount > 0:
+            self._balance += amount
+            print(f"Deposited {amount}. New balance: {self._balance}")
+        else:
+            print("Invalid deposit amount. Please enter a positive value.")
+
+    def withdraw(self, amount):
+        """
+        Withdraws money from the account if sufficient funds are available.
+        """
+        if amount > 0 and self._balance >= amount:
+            self._balance -= amount
+            print(f"Withdrew {amount}. New balance: {self._balance}")
+        else:
+            print("Insufficient funds. Current balance:", self._balance)
+
+# Create a bank account object
+account1 = BankAccount("12345678", 1000)
+
+# Access balance directly (not recommended)
+# print(account1._balance)  # This would violate encapsulation
+
+# Access balance using the get_balance method
+print(account1.get_balance())  # Output: 1000
+
+# Deposit money
+account1.deposit(500)
+
+# Withdraw money
+account1.withdraw(200)
+
+# Try to withdraw more than available balance
+account1.withdraw(1500)
+
+```
+
+Polymorphism: Objects of different classes can respond to the same method in different ways  
+polymorphism means the same function name (but different signatures) being used for different types. The key difference is the data types and number of arguments used in function.
+```
+class India():
+    def capital(self):
+        print("New Delhi is the capital of India.")
+ 
+    def language(self):
+        print("Hindi is the most widely spoken language of India.")
+ 
+    def type(self):
+        print("India is a developing country.")
+ 
+class USA():
+    def capital(self):
+        print("Washington, D.C. is the capital of USA.")
+ 
+    def language(self):
+        print("English is the primary language of USA.")
+ 
+    def type(self):
+        print("USA is a developed country.")
+ 
+obj_ind = India()
+obj_usa = USA()
+for country in (obj_ind, obj_usa):
+    country.capital()
+    country.language()
+    country.type()
+```
 
 
