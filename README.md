@@ -1,4 +1,4 @@
-# python_for_begginers
+# Python for begginers
 Welcome to the exciting world of Python programming! This guide serves as your roadmap to mastering the fundamentals of Python, equipping you with the knowledge to build your own projects and explore new horizons.
 
 ## 1. Python Basics: Laying the Foundation
@@ -38,8 +38,109 @@ Dictionaries: Unordered collections of key-value pairs enclosed in curly braces 
 Python uses operators for calculations and comparisons:
 
 Arithmetic operators: +, -, *, /, % (modulo)  
+```
+# Addition (+): Adds two numbers.
+x = 10
+y = 5
+sum = x + y
+print(sum)  # Output: 15
+
+# Subtraction (-): Subtracts one number from another.
+difference = y - x
+print(difference)  # Output: -5
+
+# Multiplication (*): Multiplies two numbers.
+product = x * y
+print(product)  # Output: 50
+
+# Division (/): Divides one number by another. In Python 2, this might result in a float even for integer division.
+quotient = x / y
+print(quotient)  # Output: 2.0 (in Python 3)
+
+# Floor division (//): Divides one number by another and returns the integer quotient, discarding any remainder.
+floor_quotient = x // y
+print(floor_quotient)  # Output: 2
+
+# Modulus (%): Returns the remainder after dividing one number by another.
+remainder = x % y
+print(remainder)  # Output: 0
+
+# Exponentiation ():** Raises one number to the power of another.
+power = x ** y
+print(power)  # Output: 1024
+```
 Comparison operators: ==, !=, <, >, <=, >=  
+```
+# Equal to (==): Checks if two values are equal.
+x = 5
+y = 10
+is_equal = x == y  # False
+print(is_equal)
+
+# Not equal to (!=): Checks if two values are not equal.
+is_not_equal = x != y  # True
+print(is_not_equal)
+
+# Greater than (>): Checks if the left operand is greater than the right.
+is_greater = x > y  # False
+print(is_greater)
+
+# Less than (<): Checks if the left operand is less than the right.
+is_less = x < y  # True
+print(is_less)
+
+# Greater than or equal to (>=): Checks if the left operand is greater than or equal to the right.
+is_greater_equal = x >= 5  # True
+print(is_greater_equal)
+
+# Less than or equal to (<=): Checks if the left operand is less than or equal to the right.
+is_less_equal = y <= 10  # True
+print(is_less_equal)
+```
 Logical operators: and, or, not  
+```
+# and:
+
+# Returns True if both operands are True, otherwise False.
+# Example: Checking if a number is even and greater than 5:
+number = 8
+is_even_and_greater_than_5 = number % 2 == 0 and number > 5
+print(is_even_and_greater_than_5)  # Output: True
+
+# or:
+
+# Returns True if at least one operand is True, otherwise False.
+# Example: Checking if a grade is either an A or a B:
+grade = "B+"
+is_a_or_b = grade == "A" or grade == "B"
+print(is_a_or_b)  # Output: True
+
+# not:
+
+# Reverses the logical value of the operand.
+# Example: Checking if a name is not empty:
+
+name = "John Doe"
+is_not_empty = not name == ""
+print(is_not_empty)  # Output: True
+
+# Here are some additional examples with multiple operators:
+
+# Checking if a user is eligible for a discount:
+
+age = 25
+is_student = True
+is_eligible = (age >= 18 and not is_student) or age >= 65
+print(is_eligible)  # Output: True if age >= 18 and not student or age >= 65
+
+# Checking if a number is within a specific range:
+
+min_value = 10
+max_value = 20
+number = 15
+is_within_range = min_value <= number <= max_value
+print(is_within_range)  # Output: True
+```
 ### 1.7 Input and Output:
 
 Use the input() function to get user input and the print() function to display output on the screen.
@@ -55,18 +156,20 @@ type(): Get the type of an object
 min(), max(): Find the minimum or maximum value  
 str(), int(), float(): Convert between data types  
 ## 2. Data Type Operations: Mastering Manipulation
-### 2.1 List Operations:
+### 2.1 String Operations:  
+
+Concatenation: string1 + string2  
+Slicing: string[start:end:step]  
+Searching: string.find("substring")  
+
+
+### 2.2 List Operations:
 
 Access elements: list[index]  
 Modify elements: list[index] = value  
 Add elements: list.append(value)  
 Remove elements: list.remove(value)  
 Iterate over elements: for item in list:  
-### 2.2 String Operations:  
-
-Concatenation: string1 + string2  
-Slicing: string[start:end:step]  
-Searching: string.find("substring")  
 ### 2.3 Tuple and Dictionary Operations:
 
 Accessing elements: tuple[index], dictionary[key]  
