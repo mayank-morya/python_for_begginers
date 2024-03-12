@@ -1,0 +1,22 @@
+Python program to implement Rock Paper Scissor game:
+
+In this game, the user gets the first chance to pick the option between Rock, paper, and scissors. After the computer select from the remaining two choices(randomly), the winner is decided as per the rules.
+----------------------------------------------------
+Dice Rolling Simulator:
+
+We all know about dice. It’s a simple cube with numbers from 1 to 6 written on its face. But what is simulation? It is making a computer model. Thus, a dice simulator is a simple computer model that can roll a dice for us.
+----------------------------------------------------
+Contact Book:
+
+This is one of the excellent python projects for beginners. Everyone uses a contact book to save contact details, including name, address, phone number, and even email address. The main objective of this project is to generate a contact book using python where users can add a new contact, edit, or delete existing contacts and view the details of all their contacts. This is one of the coolest project ideas in python for beginners to help strengthen their command of the programming language.
+
+----------------------------------------------------
+Calculator in Python:
+
+Create a simple calculator which can perform basic arithmetic operations like addition, subtraction, multiplication, or division depending upon the user input.
+You can further add functionalities for scientific calculations.
+----------------------------------------------------
+Alarm clock or countdown clock:
+
+The code will take input from the user regarding the length of the countdown in seconds. After that, a countdown will begin on the screen of the format ‘minutes: seconds’. We will use the time module here.
+
